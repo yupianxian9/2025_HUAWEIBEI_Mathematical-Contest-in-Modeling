@@ -1,0 +1,79 @@
+Encoded labels: [0 3 2 1]
+
+Training set size: 11584 samples
+Testing set size: 4965 samples
+
+--- Training Random Forest ---
+
+--- Evaluation Results for Random Forest ---
+Accuracy: 0.8175
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           N       1.00      1.00      1.00       135
+          OR       0.78      0.90      0.83      2320
+          IR       0.96      0.61      0.74      1249
+           B       0.79      0.86      0.82      1261
+
+    accuracy                           0.82      4965
+   macro avg       0.88      0.84      0.85      4965
+weighted avg       0.83      0.82      0.81      4965
+
+
+--- Training XGBoost ---
+C:\Users\AdolphWilliam\AppData\Roaming\Python\Python313\site-packages\xgboost\training.py:183: UserWarning: [09:40:32] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\learner.cc:738: 
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+
+--- Evaluation Results for XGBoost ---
+Accuracy: 0.9126
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           N       0.99      1.00      1.00       135
+          OR       0.90      0.94      0.92      2320
+          IR       0.97      0.88      0.92      1249
+           B       0.88      0.89      0.88      1261
+
+    accuracy                           0.91      4965
+   macro avg       0.93      0.93      0.93      4965
+weighted avg       0.91      0.91      0.91      4965
+
+
+--- Training Support Vector Machine ---
+
+--- Evaluation Results for Support Vector Machine ---
+Accuracy: 0.8949
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           N       1.00      0.99      1.00       135
+          OR       0.89      0.92      0.90      2320
+          IR       0.90      0.94      0.92      1249
+           B       0.88      0.80      0.84      1261
+
+    accuracy                           0.89      4965
+   macro avg       0.92      0.91      0.92      4965
+weighted avg       0.89      0.89      0.89      4965
+
+
+MLP模型
+
+--- 评估模型性能 ---
+准确率: 0.9482
+
+分类报告:
+              precision    recall  f1-score   support
+
+           N       0.99      1.00      1.00       135
+          OR       0.94      0.96      0.95      2320
+          IR       0.98      0.99      0.98      1249
+           B       0.92      0.89      0.90      1261
+
+    accuracy                           0.95      4965
+   macro avg       0.96      0.96      0.96      4965
+weighted avg       0.95      0.95      0.95      4965
